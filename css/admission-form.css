@@ -1,0 +1,278 @@
+/* ====== General Styles ====== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 20px 0;
+}
+
+/* ====== Container ====== */
+.container {
+    background: white;
+    padding: 30px;
+    width: 65%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.required {
+    color: red;
+    font-weight: bold;
+}
+
+.message {
+    color: red;
+    text-align: center;
+}
+
+/* ====== Header Image ====== */
+.header img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+/* ====== Headings ====== */
+h2 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #d9534f; /* Red color */
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+/* ====== Form Group (Ensures Proper Alignment) ====== */
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+/* Ensures that each form group wraps properly */
+.form-group > div {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 45%;
+}
+
+/* ====== Labels ====== */
+label {
+    font-weight: bold;
+    min-width: 180px;
+    white-space: nowrap;
+    margin-right: 10px;
+}
+
+/* ====== Input Fields ====== */
+input,
+select,
+textarea {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    min-width: 200px;
+}
+
+/* Full-width inputs */
+.full-width {
+    width: 100%;
+}
+
+/* ====== File Upload Styling ====== */
+.file-upload {
+    width: 100%;
+}
+
+.file-upload input {
+    width: 100%;
+}
+
+/* ====== Submit Button ====== */
+button {
+    width: 100%;
+    background: linear-gradient(90deg, #007bff, #6a11cb);
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #20c997;
+}
+
+/* ====== PassPhoto Upload ====== */
+.left-section {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.upload-container {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    display: flex;
+    flex-direction: column; /* Ensure label comes below */
+    align-items: center; /* Center align */
+    gap: 10px; /* Space between elements */
+}
+
+.photo-preview {
+    width: 130px;
+    height: 160px;
+    border: 2px dashed #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 10px auto;
+    border-radius: 5px;
+    background-image: url("../icons/passport-photo-icon.png"); /* Set background image */
+    background-size: cover; /* Ensure the image fully covers the box */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating */
+    cursor: pointer;
+    position: relative;
+}
+
+.photo-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.photo-preview::after {
+    content: attr(data-text);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.upload-container input[type="file"] {
+    display: none;
+}
+
+/* ====== Responsive Design (For Small Screens) ====== */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-group > div {
+        width: 100%;
+    }
+
+    label {
+        margin-bottom: 5px;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+    }
+}
+
+/* ====== Admission Consent Form ====== */
+.rules-container {
+    background: #f8f9fae0;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+}
+.rules-container p {
+    background-color: rgb(233, 214, 189);
+}
+h4 {
+    text-align: center;
+    font-size: larger;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+.highlight {
+    color: #d9534f;
+    font-weight: bold;
+}
+ul {
+    padding-left: 20px;
+}
+li {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+.checkbox-container {
+    text-align: left;
+    margin-top: 20px;
+    margin-left: -35px;
+    margin-bottom: 25px;
+}
+.checkbox-container input {
+    margin-right: -60px;
+}
+
+/* ====== Session message ====== */
+.message-box {
+    width: 80%;
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    display: none;
+}
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    display: block;
+    font-weight: bold;
+}
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    display: block;
+}
